@@ -1,0 +1,42 @@
+{
+  "name": "@formulex/core",
+  "version": "1.0.0",
+  "description": "core",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./types/index.d.ts",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "keywords": [
+    "form"
+  ],
+  "author": "HeskeyBaozi <hezhiyu233@foxmail.com>",
+  "homepage": "https://github.com/formulex/formulex",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formulex/formulex.git"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "build": "npm run build:types && npm run build:es && npm run build:lib",
+    "build:es": "rimraf es && cross-env ESMODULE=true babel src --out-dir es --extensions '.ts'",
+    "build:lib": "rimraf lib && cross-env babel src --out-dir lib --extensions '.ts'",
+    "build:types": "rimraf types && tsc --emitDeclarationOnly",
+    "type-check": "tsc --noEmit"
+  },
+  "bugs": {
+    "url": "https://github.com/formulex/formulex/issues"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5"
+  }
+}
