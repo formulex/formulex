@@ -39,7 +39,8 @@
     "url": "https://github.com/formulex/formulex/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5"
+    "@babel/runtime": "^7.12.5",
+    "@formulex/utils": "^1.0.0"
   },
   "peerDependencies": {
     "mobx": "^6.0.0",
