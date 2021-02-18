@@ -4,7 +4,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const packagesDir = path.resolve(process.cwd(), './packages');
+const packagesDir = path.resolve(__dirname, './packages');
 const packages = fs.readdirSync(packagesDir);
 const alias = packages
   .map((p) => path.join(packagesDir, p))

@@ -1,1 +1,1 @@
-export { defaults } from 'lodash';
+export { default as defaults } from 'lodash/defaults';
